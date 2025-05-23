@@ -1,10 +1,8 @@
 {
-  "name": "Linux GUI with noVNC",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
-  "settings": {},
-  "forwardPorts": [6080],
-  "postCreateCommand": "./startup.sh",
-  "workspaceFolder": "/workspace"
+  "name": "Dockerized Ubuntu Desktop",
+  "postCreateCommand": "docker run -d -p 8080:80 -e RESOLUTION=1280x720 -v /dev/shm:/dev/shm dorowu/ubuntu-desktop-lxde-vnc:latest",
+  "forwardPorts": [8080],
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  }
 }
