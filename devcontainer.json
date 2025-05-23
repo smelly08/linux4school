@@ -1,0 +1,10 @@
+{
+  "name": "Linux GUI with noVNC",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {},
+  "forwardPorts": [6080],
+  "postCreateCommand": "./startup.sh",
+  "workspaceFolder": "/workspace"
+}
